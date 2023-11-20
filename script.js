@@ -47,6 +47,7 @@ else {
 }
 });
 
+
 //TEXT FILL//
 gsap.to("p", {
 backgroundPositionX: "0%",
