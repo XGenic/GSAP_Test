@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "GT-Sectra";
+    src: url("/font/GT-Sectra-Display-Medium.ttf");
+}
+
+
+body {
+    margin: 0;
+    /* overflow: hidden; */
+  }
+  
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e29b9b; /* Set background color as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Set a high z-index to make sure it's on top */
+}
+
+#logo {
+    /* max-width: 100%;
+    height: 80%; */
+    height: 400px;
+    width: 400px;
+}
+
+#loadingIcon {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+#heroImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg {
+    /* background-image: url("img/bathy.jpg"); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: center;
+  }
+
+#sec_1{
+    background-image: url("img/bathy1.png");
+}
+
+#sec_2{
+    background-image: url("img/group.jpg");
+}
+
+h1 {
+color: white;
+text-shadow: 1px 1px 3px black;
+z-index: 1;
+font-size: 3em;
+font-weight: 400;
+margin-top: 10%;
+}
+
+/* p {
+color: white;
+text-shadow: 1px 1px 3px black;
+z-index: 1;
+font-size: 3em;
+font-weight: 200;
+margin-top: 10%;
+margin-left: 10%;
+margin-right: 25%;
+text-align: left;
+} */
+
+p {
+background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 50%,
+    rgb(37, 37, 37) 50%
+);
+background-size: 200% 100%;
+background-position-x: 100%;
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+/* margin-bottom: -250px;
+margin-left: 50px;
+line-height: 1.2; */
+font-size: 3em;
+font-weight: 200;
+margin-top: 10%;
+margin-left: 10%;
+margin-right: 25%;
+font-family: "GT-Sectra";
+/*   outline: 6px dotted teal; */
+}
