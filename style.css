@@ -6,6 +6,8 @@
 
 body {
     margin: 0;
+    padding:0;
+    background-color: navy;
     /* overflow: hidden; */
   }
   
@@ -48,7 +50,6 @@ section {
   }
 
   .bg {
-    /* background-image: url("img/bathy.jpg"); */
     position: absolute;
     top: 0;
     left: 0;
