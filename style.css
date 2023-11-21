@@ -107,8 +107,9 @@ background-clip: text;
 /* margin-bottom: -250px;
 margin-left: 50px;
 line-height: 1.2; */
-font-size: 3em;
-font-weight: 200;
+font-size: 4.6vmin;
+text-align: left;
+/* font-weight: 200; */
 margin-top: 10%;
 margin-left: 10%;
 margin-right: 25%;
