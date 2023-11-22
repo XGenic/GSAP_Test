@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding:0;
-    background-color: navy;
+    background-color: cornsilk;
     /* overflow: hidden; */
   }
   
@@ -41,9 +41,14 @@ body {
     height: auto;
 }
 
+.one img {
+    max-width: 100%;
+    height: auto;
+}
+
 section {
     position: relative;
-    height: 75vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,12 +69,27 @@ section {
     vertical-align: center;
   }
 
+  canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
 #sec_1{
-    background-image: url("img/bathy1.png");
+    background-image: url("img/waves.png");
+}
+
+#sec_1 p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+#sec_1 p:first-child{
+    margin-top: 10%;
 }
 
 #sec_2{
-    background-image: url("img/group.jpg");
+    background-image: url("img/waves.png");
 }
 
 h1 {
@@ -110,9 +130,10 @@ line-height: 1.2; */
 font-size: 4.6vmin;
 text-align: left;
 /* font-weight: 200; */
-margin-top: 10%;
+/* margin-top: 10%;
 margin-left: 10%;
-margin-right: 25%;
+margin-right: 25%; */
+margin-left: 10%;
 font-family: "GT-Sectra";
 /*   outline: 6px dotted teal; */
 }

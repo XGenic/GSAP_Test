@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let sections = gsap.utils.toArray("section");
+let sections = gsap.utils.toArray(".boatscroll");
 
 sections.forEach(section => {  
   let canvas = section.querySelector("canvas");
@@ -9,7 +9,7 @@ sections.forEach(section => {
 
 function initCanvas(section, canvas) {
   
-  let text = section.querySelector(".text");
+  // let text = section.querySelector(".text");
   let context = canvas.getContext("2d");
   canvas.width = 1920;
   canvas.height = 1080;  
@@ -40,11 +40,11 @@ function initCanvas(section, canvas) {
       markers: true
     }
   })
-  .to(text, {
-    opacity: 1,
-    x: -100,
-    duration: 0.5
-  })
+  // .to(text, {
+  //   opacity: 1,
+  //   x: -100,
+  //   duration: 0.5
+  // })
   .to(airpods, {
     frame: frameCount - 1,
     snap: "frame",
