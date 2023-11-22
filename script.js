@@ -7,45 +7,12 @@ window.onbeforeunload = function () {
 gsap.to("#loadingScreen", {
     duration: 3, // Set the duration of the animation
     y: "-100%", // Move the loading screen up to hide it
-    ease: "power2.inOut", // Use ease for smooth animation
+    ease: "expo.in", // Use ease for smooth animation
     onComplete: () => {
       // After animation is complete, show the main content
       document.getElementById("mainContent").style.display = "block";
     }
   });
-
-//PARALAX//
-gsap.utils.toArray("section").forEach((section, i) => {
-section.bg = section.querySelector(".bg"); 
-
-if (i) {
-    section.bg.style.backgroundPosition = `50% ${innerHeight / 2}px`;
-
-    gsap.to(section.bg, {
-    backgroundPosition: `50% ${-innerHeight / 2}px`,
-    ease: "none",
-    scrollTrigger: {
-        trigger: section,
-        scrub: true
-    }
-    });
-} 
-
-else {
-    section.bg.style.backgroundPosition = "50% 0px"; 
-
-    gsap.to(section.bg, {
-    backgroundPosition: `50% ${-innerHeight / 2}px`,
-    ease: "none",
-    scrollTrigger: {
-        trigger: section,
-        start: "top top", 
-        end: "bottom top",
-        scrub: true
-    }
-    });
-}
-});
 
 
 //TEXT FILL//
@@ -74,7 +41,6 @@ sections.forEach(section => {
 
 function initCanvas(section, canvas) {
   
-  // let text = section.querySelector(".text");
   let context = canvas.getContext("2d");
   canvas.width = 1920;
   canvas.height = 1080;  
@@ -127,3 +93,43 @@ function initOther(section) {
     end: "+=200%"
   });
 }
+
+
+gsap.timeline({
+  scrollTrigger:{
+    trigger: ".parent",
+    markers: true,
+    scrub: 1,
+    pin: true,
+    start: "top top",
+    end: "+=1500"
+  }
+})
+.to(".main_img",{
+  scale: 2.5,
+})
+.to(".other_img",{
+  scale: 1.8,
+  opacity: 0,
+}, 0);
+
+
+
+//I NEED TO KEEP PARALLAX DOWN HERE FOR SOME REASON//
+gsap.utils.toArray("section").forEach((section, i) => {
+  section.bg = section.querySelector(".bg"); 
+  
+      section.bg.style.backgroundPosition = "50% 0px"; 
+  
+      gsap.to(section.bg, {
+      backgroundPosition: `50% ${-innerHeight / 2}px`,
+      ease: "none",
+      scrollTrigger: {
+          trigger: section,
+          markers: false,
+          start: "top top", 
+          end: "bottom top",
+          scrub: true
+      }
+      });
+  });
